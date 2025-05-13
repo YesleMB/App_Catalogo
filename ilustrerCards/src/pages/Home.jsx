@@ -1,33 +1,36 @@
 import React from 'react';
 import { BotaoSelecao } from "../components/Botoes";
 import { ConteinerTelaInicial, ConteinerBotoes, ConteinerDestaque, ConteinerPesquisa, ConteinerLogin } from "../components/Conteiners";
-import { Header,Nav,Main,SectionCardPrincipal,SectionBotoes } from "../components/Semantiico";
+import { Header, Nav, Main, SectionCardPrincipal, SectionBotoes } from "../components/Semantiico";
+import { Link } from "react-router-dom"
+import Pagina1 from './pagina1';
 
 const Home = () => {
     return (
         <ConteinerTelaInicial>
-              <Header>
-                  <h1>Visizuer Cosmeticos</h1>
-              </Header>
-              <Main>
-                    <SectionCardPrincipal>
-                          <ConteinerDestaque>
-                                <h2>Nossa linha premium</h2>
-                          </ConteinerDestaque> 
-                    </SectionCardPrincipal>
-                    <SectionBotoes>
-                        <BotaoSelecao>
-                            <p>botao 1</p>
-                        </BotaoSelecao>
-                        <BotaoSelecao>
-                            <p>botao 2</p>
-                        </BotaoSelecao>
-                        <BotaoSelecao>
-                            <p>botao 3</p>
-                        </BotaoSelecao>
-                    </SectionBotoes>
-              </Main>
-            </ConteinerTelaInicial>
+            <Header>
+                <h1>Visizuer Cosmeticos</h1>
+            </Header>
+            <Main>
+                <SectionCardPrincipal>
+                    <ConteinerDestaque>
+                        <h2>Nossa linha premium</h2>
+                    </ConteinerDestaque>
+                </SectionCardPrincipal>
+                <SectionBotoes>
+                    <Link to="pagina1" >
+                        <BotaoSelecao/>
+                    </Link>
+                    <Link to="pagina2" > 
+                            <BotaoSelecao/>
+                    </Link>
+                    <Link to="pagina3" >
+                        <BotaoSelecao/>
+                    </Link>
+
+                </SectionBotoes>
+            </Main>
+        </ConteinerTelaInicial>
     );
 };
 

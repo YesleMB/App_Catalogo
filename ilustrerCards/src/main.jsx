@@ -10,14 +10,14 @@ import {createBrowserRouter,RouterProvider} from "react-router-dom"
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/home',
     element: <App />,             
     errorElement: <h1>404 · Não encontrado</h1>,
     children: [
       { index: true, element: <Home /> },      
       { path: 'pagina1', element: <Pagina1 /> },
       {path: 'pagina2', element: <Pagina2 />},
-      {path: 'pagina3', element: <Pagina2 />},
+      {path: 'pagina3', element: <Pagina3 />},
     ]
   }
 ])
