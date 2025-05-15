@@ -10,16 +10,17 @@ import {createBrowserRouter,RouterProvider} from "react-router-dom"
 
 const router = createBrowserRouter([
   {
-    path: '/home',
+    path: '/',
     element: <App />,             
     errorElement: <h1>404 · Não encontrado</h1>,
     children: [
-      { index: true, element: <Home /> },      
-      { path: 'pagina1', element: <Pagina1 /> },
+      { index: true, element: <App /> },   
+      {path: 'home', element: <Home />},   
+    ]
+  },
+   { path: 'pagina1', element: <Pagina1 /> },
       {path: 'pagina2', element: <Pagina2 />},
       {path: 'pagina3', element: <Pagina3 />},
-    ]
-  }
 ])
 
 createRoot(document.getElementById('root')).render(
